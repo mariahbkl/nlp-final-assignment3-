@@ -1,35 +1,35 @@
-# Sentiment Analysis - NLP Assignment
+# LLM Usage - Email Classification
 
-This notebook applies sentiment analysis techniques to a sample of 500 tweets using two different approaches:
+This notebook demonstrates how a pre-trained Large Language Model (LLM) can be used to classify emails as spam or ham using **prompt engineering**.
 
-1. **Lexicon-based method** with VADER from the `nltk` library
-2. **Transformer-based method** using a pre-trained model from Hugging Face's `transformers` library
-
-The goal is to identify the sentiment polarity (positive, neutral, or negative) of each tweet and compare the results of both methods.
+We use the `distilbert-base-uncased-finetuned-sst-2-english` model from Hugging Face and apply it to a sample of 200 real email messages.
 
 ---
 
-## Files
+##  Files
 
-- `sentiment_analysis.ipynb`: Main notebook with preprocessing, analysis and visualisation
-- `tweets-data.csv`: Dataset containing the tweet contents
+- `llm_classification.ipynb`: Notebook using a transformer pipeline for classification
+- `spam.csv`: CSV file with email messages and labels
 
 ---
 
 ## How to Run
 
 1. Open the notebook in [Google Colab](https://colab.research.google.com/)
-2. Upload `tweets-data.csv` manually when prompted
+2. Upload `spam.csv` manually when prompted
 3. Run the notebook to:
-   - Clean the tweet text
-   - Apply VADER sentiment analysis
-   - Apply Transformers sentiment classification
-   - Compare and visualise the results
+   - Format prompt-based inputs
+   - Apply the LLM to classify emails
+   - Compare predictions to true labels
+   - Compute classification accuracy
 
 ---
 
-##Output
+## Output
 
-- Sentiment labels from both VADER and Transformers
-- Comparison matrix and bar charts of sentiment distribution
+- Predicted labels: `spam` or `ham`
+- Confusion matrix of true vs predicted labels
+- Accuracy score of the model
+
+
 
